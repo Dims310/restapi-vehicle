@@ -9,6 +9,12 @@ module.exports = function(app){
     app.route('/users')
         .get(json.getAllUser);
 
-    app.route('/vehicle/create')
+    app.route('/vehicle/brand')
+        .get(json.getAllVehicleBrand);
+
+    app.route('/vehicle/brand/create')
         .post(json.postVehicles);
+
+    app.route('/vehicle/brand/update')
+        .patch(json.patchVehicles);
 }

@@ -8,4 +8,7 @@ module.exports = function(app){
 
     app.route('/users')
         .get(json.getAllUser);
+
+    app.route('/vehicle/create')
+        .post(json.postVehicles);
 }

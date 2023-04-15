@@ -37,7 +37,7 @@ exports.login = function(req, res){
         if (err) throw err;
         if (rows.length == 1){
             var token = jwt.sign({rows}, config.secret, {
-                expiresIn: "3h"
+                expiresIn: 15 // 15 seconds, just to make sure is it expired soon
             });
             user_id = rows[0].id;
 
@@ -45,7 +45,7 @@ exports.login = function(req, res){
                 user_id: user_id,
                 access_token: token,
             }
-
+            
             connection.query("INSERT INTO access_token (user_id, token) VALUES (?, ?)", [data.user_id, data.access_token], function(err, rows){
                 if(err) throw err;
                  res.json({
@@ -59,4 +59,8 @@ exports.login = function(req, res){
             response.bad("User Not Found or Wrong Password.", res);
         }
     });
+}
+
+exports.admin = function(req, res){
+    response.ok("Admin Page", res);
 }

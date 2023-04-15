@@ -1,5 +1,7 @@
 'use strict';
 
+const { response } = require("express");
+
 exports.ok = function(values, res){
     var data = {
         'status' : 200,
@@ -36,6 +38,16 @@ exports.nested = function(values, res){
         'status' : 200,
         'values' : result
     };
+
+    res.json(data);
+    res.end();
+}
+
+exports.bad = function(values, res){
+    var data = {
+        'status' : 401,
+        'values' : values
+    }
 
     res.json(data);
     res.end();

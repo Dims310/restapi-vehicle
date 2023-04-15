@@ -13,8 +13,14 @@ module.exports = function(app){
         .get(json.getAllVehicleBrand);
 
     app.route('/vehicle/brand/create')
-        .post(json.postVehicles);
+        .post(json.postVehiclesBrand);
 
     app.route('/vehicle/brand/update')
-        .patch(json.patchVehicles);
+        .patch(json.patchVehiclesBrand);
+
+    app.route('/vehicle/brand/delete')
+        .delete(json.deleteVehiclesBrand);
+
+    app.route('/vehicle/brand/types')
+        .get(json.getAllVehicleBrandGroup);
 }

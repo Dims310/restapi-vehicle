@@ -8,11 +8,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(morgan('dev'));
 
-// routes
+// routes for universal user
 var routes = require('./routes');
 routes(app);
 
-// group of auth endpoint route
+// group of auth endpoint route, including users and vehicle
 app.use('/auth', require('./middleware'));
 
 app.listen(3000, () => {

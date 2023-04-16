@@ -2,6 +2,7 @@
 
 const { response } = require("express");
 
+// ok respond
 exports.ok = function(values, res){
     var data = {
         'status' : 200,
@@ -12,24 +13,26 @@ exports.ok = function(values, res){
      res.end();
 }
 
+// paginate respond
+exports.paginate = function(values, res, page, limit){
+    const startIndex = (page - 1) * limit;
+    const endIndex = page * limit;
+    
+    const result = values.slice(startIndex, endIndex);
+
+    var data = {
+        'status' : 200,
+        'values' : result
+    };
+
+     res.json(data);
+     res.end();
+}
+
 // response nested
 exports.nested = function(values, res){
-    // const result = values.reduce((acc, item) => {
-    //     if (acc[item.name]){
-    //         const group = acc[item.name];
-    //         if (Array.isArray(group.vehicle_type)){
-    //             group.vehicle_type.push(item.vehicle_type);
-    //         } else {
-    //             group.vehicle_type = [group.vehicle_type, item.vehicle_type];
-    //         }
-    //     } else {
-    //         acc[item.name] = item;
-    //     }
-    //     return acc;
-    // }, {});
-
-    const result = values.reduce((groupBrand, {id, name, types}) => {
-        if (!groupBrand[name]) groupBrand[name] = {id, name, types: []};
+    const result = values.reduce((groupBrand, {id, brand_id, name, types}) => {
+        if (!groupBrand[name]) groupBrand[name] = {id, brand_id, name, types: []};
         groupBrand[name].types.push(types);
         return groupBrand;
     }, {});

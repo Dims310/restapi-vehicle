@@ -1,0 +1,3678 @@
+{
+	"info": {
+		"_postman_id": "ed39e4f8-bfd1-4231-a66b-5a7247ea6624",
+		"name": "REST API Vehicle",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get Users *Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxNTc4MywiZXhwIjoxNjgxNjE2MDgzfQ.84bWuOkIMsmlgGyUprzN1bF_n8edJOFOFbg-m7btU70",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/auth/users?page=2&limit=5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Users *Admin",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/auth/users?page=2&limit=5",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"users"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "395"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"18b-8l1mFenBARPEwrOi2DpJBkHQ2EE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 16 Apr 2023 03:30:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"values\": [\n        {\n            \"id\": 13,\n            \"name\": \"Administator Jual Mobil bekas\",\n            \"is_admin\": 1,\n            \"password\": \"e00cf25ad42683b3df678c61f42c6bda\",\n            \"created_at\": \"2023-04-16T03:19:29.000Z\",\n            \"updated_at\": \"2023-04-16T03:19:29.000Z\"\n        },\n        {\n            \"id\": 14,\n            \"name\": \"Administator Jual Mobil\",\n            \"is_admin\": 1,\n            \"password\": \"c84258e9c39059a89ab77d846ddab909\",\n            \"created_at\": \"2023-04-16T03:29:30.000Z\",\n            \"updated_at\": \"2023-04-16T03:29:30.000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Administator Jual Mobil",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "admin2",
+									"type": "default"
+								},
+								{
+									"key": "is_admin",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/auth/api/v1/register",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"api",
+								"v1",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create User Admin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Administator Jual Mobil",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "admin2",
+											"type": "default"
+										},
+										{
+											"key": "is_admin",
+											"value": "1",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/auth/api/v1/register",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"api",
+										"v1",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "51"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"33-U2RVNv06ZZuTqeErYm4RwRABqPk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 16 Apr 2023 03:29:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"values\": \"Success Create A New User\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Administator Jual Mobil",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "admin2",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/auth/api/v1/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login User Admin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Administator Jual Mobil",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "admin2",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/auth/api/v1/login",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"api",
+										"v1",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "457"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c9-2E8FDsLjL5ihgM4O4sl5EKbcuao\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 16 Apr 2023 03:29:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Token Generated.\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxNTc4MywiZXhwIjoxNjgxNjE2MDgzfQ.84bWuOkIMsmlgGyUprzN1bF_n8edJOFOFbg-m7btU70\",\n    \"current_user\": 14\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete User *Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxNTc4MywiZXhwIjoxNjgxNjE2MDgzfQ.84bWuOkIMsmlgGyUprzN1bF_n8edJOFOFbg-m7btU70",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "13",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/auth/users/delete",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"users",
+								"delete"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete User *Admin",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "13",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/auth/users/delete",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"users",
+										"delete"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "57"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"39-7VLNidpff77imZJGp+aPhndqN5o\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 16 Apr 2023 03:31:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"values\": \"Success Delete Data User ID: 13\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Vehicle",
+			"item": [
+				{
+					"name": "Brand",
+					"item": [
+						{
+							"name": "Get All Brand",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxNjI3MiwiZXhwIjoxNjgxNjE2NTcyfQ.r629akt7-__l5ylAMdw3Fz-_LTr1QKyuKd3FvDuci3E",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/auth/{{vcbrand}}?page=1&limit=10",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"{{vcbrand}}"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get All Brand (Expired Token).",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/auth/{{vcbrand}}?page=1&limit=5",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vcbrand}}"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "43"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"2b-sXNJdN6eisLzTYgW6QWoR405/eU\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 03:37:46 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 401,\n    \"values\": \"Unexpected Token.\"\n}"
+								},
+								{
+									"name": "Get All Brand",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/auth/{{vcbrand}}?page=1&limit=10",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vcbrand}}"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "999"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3e7-WWB0Y1IVh+/ypN4OQaVGK3ZEdhM\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 03:38:57 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": [\n        {\n            \"id\": 1,\n            \"name\": \"Toyota\",\n            \"created_at\": \"2023-04-14T07:00:48.000Z\",\n            \"updated_at\": \"2023-04-14T07:00:48.000Z\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Daihatsu\",\n            \"created_at\": \"2023-04-14T07:01:07.000Z\",\n            \"updated_at\": \"2023-04-14T07:01:07.000Z\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Honda\",\n            \"created_at\": \"2023-04-14T07:24:53.000Z\",\n            \"updated_at\": \"2023-04-14T07:24:53.000Z\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Mitsubishi Motors\",\n            \"created_at\": \"2023-04-14T07:57:40.000Z\",\n            \"updated_at\": \"2023-04-14T08:01:59.000Z\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Suzuki\",\n            \"created_at\": \"2023-04-14T08:05:42.000Z\",\n            \"updated_at\": \"2023-04-15T16:00:42.000Z\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Mitsubishi Fuso\",\n            \"created_at\": \"2023-04-15T14:58:28.000Z\",\n            \"updated_at\": \"2023-04-15T14:58:28.000Z\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Isuzu\",\n            \"created_at\": \"2023-04-15T15:00:32.000Z\",\n            \"updated_at\": \"2023-04-15T15:00:32.000Z\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"Aston Martin\",\n            \"created_at\": \"2023-04-15T23:49:58.000Z\",\n            \"updated_at\": \"2023-04-15T23:49:58.000Z\"\n        },\n        {\n            \"id\": 11,\n            \"name\": \"Hyundai\",\n            \"created_at\": \"2023-04-16T03:33:45.000Z\",\n            \"updated_at\": \"2023-04-16T03:33:45.000Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Create Brand *Admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxNTc4MywiZXhwIjoxNjgxNjE2MDgzfQ.84bWuOkIMsmlgGyUprzN1bF_n8edJOFOFbg-m7btU70",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Hyundai",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/auth/{{vcbrand}}/create",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"{{vcbrand}}",
+										"create"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create Brand *Admin",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "Hyundai",
+													"type": "default"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/auth/{{vcbrand}}/create",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vcbrand}}",
+												"create"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "54"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"36-RZtaNNP/YPqmO+DgkhTntOcRN7g\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 03:33:45 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": \"Success Create Vehicle Brand\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Patch Brand *Admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxNjI3MiwiZXhwIjoxNjgxNjE2NTcyfQ.r629akt7-__l5ylAMdw3Fz-_LTr1QKyuKd3FvDuci3E",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "11",
+											"type": "default"
+										},
+										{
+											"key": "name",
+											"value": "Hyundai-HMID",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/auth/{{vcbrand}}/patch",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"{{vcbrand}}",
+										"patch"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Patch Brand *Admin",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "id",
+													"value": "11",
+													"type": "default"
+												},
+												{
+													"key": "name",
+													"value": "Hyundai-HMID",
+													"type": "default"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/auth/{{vcbrand}}/patch",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vcbrand}}",
+												"patch"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "54"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"36-hBoIZI1F5OXdfN944a1u6Eaq7lM\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 03:39:54 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": \"Success Update Vehicle Brand\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Brand *Admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxNjI3MiwiZXhwIjoxNjgxNjE2NTcyfQ.r629akt7-__l5ylAMdw3Fz-_LTr1QKyuKd3FvDuci3E",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "7",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/auth/{{vcbrand}}/delete",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"{{vcbrand}}",
+										"delete"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete Brand *Admin",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "id",
+													"value": "7",
+													"type": "default"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/auth/{{vcbrand}}/delete",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vcbrand}}",
+												"delete"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "65"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"41-CXwdoXi5hbUT1zaEMGpNQwGMB84\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 03:40:47 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": \"Success Delete Data Vehicle Brand ID: 7\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Type",
+					"item": [
+						{
+							"name": "Get All Type Each Brand",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxNzMxMiwiZXhwIjoxNjgxNjE3NjEyfQ.sqempk3xk4FMAxLm4NrArJUt06wi0ohOlHpaCBUAuUE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/auth/{{vctype}}/brand?page=1&limit=5",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"{{vctype}}",
+										"brand"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get All Type Each Brand",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/auth/{{vctype}}/brand?page=1&limit=5",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vctype}}",
+												"brand"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "348"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"15c-Li/8zCktzPTZK1chGw5zKTVwsWs\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 03:58:20 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": {\n        \"Toyota\": {\n            \"brand_id\": 1,\n            \"name\": \"Toyota\",\n            \"types\": [\n                \"Hatchback\",\n                \"Sedan\",\n                \"Coupe\",\n                \"SUV\"\n            ]\n        },\n        \"Honda\": {\n            \"brand_id\": 3,\n            \"name\": \"Honda\",\n            \"types\": [\n                \"Hatchback\",\n                \"SUV\"\n            ]\n        },\n        \"Daihatsu\": {\n            \"brand_id\": 2,\n            \"name\": \"Daihatsu\",\n            \"types\": [\n                \"Hatchback\",\n                \"SUV\"\n            ]\n        },\n        \"Aston Martin\": {\n            \"brand_id\": 10,\n            \"name\": \"Aston Martin\",\n            \"types\": [\n                \"Coupe\",\n                \"SUV\",\n                \"Superleggera\",\n                \"Cabrio\"\n            ]\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Type",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxNzg0MCwiZXhwIjoxNjgxNjE4MTQwfQ.iWJhFOoIQKOlgPBy8NijqynFb3TRY2Ex2cxUqKd6YLc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{host}}/auth/{{vctype}}?page=3&limit=5",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"{{vctype}}"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "3"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Type",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": []
+										},
+										"url": {
+											"raw": "{{host}}/auth/{{vctype}}?page=1&limit=5",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vctype}}"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "616"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"268-FlGvr9ItxBOEBGt3QiOIOsKYcnc\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 03:59:55 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": [\n        {\n            \"id\": 1,\n            \"name\": \"Hatchback\",\n            \"brand_id\": 1,\n            \"created_at\": \"2023-04-14T09:20:44.000Z\",\n            \"updated_at\": \"2023-04-14T09:20:44.000Z\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Sedan\",\n            \"brand_id\": 1,\n            \"created_at\": \"2023-04-14T09:20:44.000Z\",\n            \"updated_at\": \"2023-04-14T09:20:44.000Z\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Coupe\",\n            \"brand_id\": 1,\n            \"created_at\": \"2023-04-14T09:22:59.000Z\",\n            \"updated_at\": \"2023-04-14T09:22:59.000Z\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Hatchback\",\n            \"brand_id\": 3,\n            \"created_at\": \"2023-04-14T09:22:59.000Z\",\n            \"updated_at\": \"2023-04-14T09:22:59.000Z\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"SUV\",\n            \"brand_id\": 3,\n            \"created_at\": \"2023-04-14T09:25:03.000Z\",\n            \"updated_at\": \"2023-04-14T09:25:03.000Z\"\n        }\n    ]\n}"
+								},
+								{
+									"name": "Get Type w/ Duplicate Data",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": []
+										},
+										"url": {
+											"raw": "{{host}}/auth/{{vctype}}?page=3&limit=5",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vctype}}"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "3"
+												},
+												{
+													"key": "limit",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "493"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1ed-zhlMW+qQB24xCl0uqYb+zdkT7wk\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 04:05:55 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": [\n        {\n            \"id\": 13,\n            \"name\": \"Cabrio\",\n            \"brand_id\": 10,\n            \"created_at\": \"2023-04-16T01:28:20.000Z\",\n            \"updated_at\": \"2023-04-16T01:31:37.000Z\"\n        },\n        {\n            \"id\": 15,\n            \"name\": \"SUV\",\n            \"brand_id\": 1,\n            \"created_at\": \"2023-04-16T01:36:50.000Z\",\n            \"updated_at\": \"2023-04-16T01:36:50.000Z\"\n        },\n        {\n            \"id\": 16,\n            \"name\": \"MPV\",\n            \"brand_id\": 1,\n            \"created_at\": \"2023-04-16T04:02:58.000Z\",\n            \"updated_at\": \"2023-04-16T04:02:58.000Z\"\n        },\n        {\n            \"id\": 17,\n            \"name\": \"MPV\",\n            \"brand_id\": 1,\n            \"created_at\": \"2023-04-16T04:04:31.000Z\",\n            \"updated_at\": \"2023-04-16T04:04:31.000Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Type Brand ID Filter",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxNzUzMywiZXhwIjoxNjgxNjE3ODMzfQ.beH_G9pW52i2wrxBJfz2eot-D4Ai3qghf6Aa1ikUItk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/auth/{{vctype}}/brand/2?page=1&limit=10",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"{{vctype}}",
+										"brand",
+										"2"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Type Brand ID Filter",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/auth/{{vctype}}/brand/2?page=1&limit=10",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vctype}}",
+												"brand",
+												"2"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "261"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"105-aoN9hQJ5B8iw1R5E5miKn4i2A4Y\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 04:01:22 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": [\n        {\n            \"id\": 6,\n            \"name\": \"Hatchback\",\n            \"brand_id\": 2,\n            \"created_at\": \"2023-04-14T09:25:03.000Z\",\n            \"updated_at\": \"2023-04-14T09:25:03.000Z\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"SUV\",\n            \"brand_id\": 2,\n            \"created_at\": \"2023-04-14T09:25:47.000Z\",\n            \"updated_at\": \"2023-04-14T09:25:47.000Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Create Type *Admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxNzg0MCwiZXhwIjoxNjgxNjE4MTQwfQ.iWJhFOoIQKOlgPBy8NijqynFb3TRY2Ex2cxUqKd6YLc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "brand_id",
+											"value": "1",
+											"type": "default"
+										},
+										{
+											"key": "name",
+											"value": "MPV",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/auth/{{vctype}}/create",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"{{vctype}}",
+										"create"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create Type *Admin",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "brand_id",
+													"value": "1",
+													"type": "default"
+												},
+												{
+													"key": "name",
+													"value": "MPV",
+													"type": "default"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/auth/{{vctype}}/create",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vctype}}",
+												"create"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "54"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"36-0T6s7tDg8k0oxfngbcDcqnCCJEI\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 04:02:58 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": \"Success Create Vehicle Types\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Patch Type *Admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxNzg0MCwiZXhwIjoxNjgxNjE4MTQwfQ.iWJhFOoIQKOlgPBy8NijqynFb3TRY2Ex2cxUqKd6YLc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "8",
+											"type": "default"
+										},
+										{
+											"key": "brand_id",
+											"value": "10",
+											"type": "default"
+										},
+										{
+											"key": "name",
+											"value": "Sport Coupe",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/auth/{{vctype}}/patch",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"{{vctype}}",
+										"patch"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Patch Type *Admin",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "id",
+													"value": "8",
+													"type": "default"
+												},
+												{
+													"key": "brand_id",
+													"value": "10",
+													"type": "default"
+												},
+												{
+													"key": "name",
+													"value": "Sport Coupe",
+													"type": "default"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/auth/{{vctype}}/patch",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vctype}}",
+												"patch"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "54"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"36-bMpzXqqOd69v6Pdt5PSgQB2Z0IQ\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 04:05:25 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": \"Success Update Vehicle Types\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Type *Admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxNzg0MCwiZXhwIjoxNjgxNjE4MTQwfQ.iWJhFOoIQKOlgPBy8NijqynFb3TRY2Ex2cxUqKd6YLc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "17",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/auth/{{vctype}}/delete",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"{{vctype}}",
+										"delete"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete Type *Admin",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "id",
+													"value": "17",
+													"type": "default"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/auth/{{vctype}}/delete",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vctype}}",
+												"delete"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "65"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"41-JuNcHMJEzNBUhnQUozr/tPCEx1c\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 04:06:46 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": \"Success Delete Data Vehicle Type ID: 17\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Model",
+					"item": [
+						{
+							"name": "Get Model",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxODUxMywiZXhwIjoxNjgxNjE4ODEzfQ.v4kvUaGLQVGCHBLvkCGyKnFGL4D5CbYvCST7Yf4F7D8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/auth/{{vcmodel}}?page=1&limit=5",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"{{vcmodel}}"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Model",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/auth/{{vcmodel}}?page=2&limit=5",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vcmodel}}"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "2"
+												},
+												{
+													"key": "limit",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "386"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"182-aSqe5LYkqhONQhgB8s6PI4BVnYE\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 04:10:45 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": [\n        {\n            \"id\": 6,\n            \"name\": \"Agya\",\n            \"type_id\": 1,\n            \"created_at\": \"2023-04-16T01:34:40.000Z\",\n            \"updated_at\": \"2023-04-16T01:34:40.000Z\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Fortuner\",\n            \"type_id\": 15,\n            \"created_at\": \"2023-04-16T01:36:07.000Z\",\n            \"updated_at\": \"2023-04-16T01:38:22.000Z\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"City Hatchback\",\n            \"type_id\": 3,\n            \"created_at\": \"2023-04-16T04:10:08.000Z\",\n            \"updated_at\": \"2023-04-16T04:10:08.000Z\"\n        }\n    ]\n}"
+								},
+								{
+									"name": "Get Model after Delete",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/auth/{{vcmodel}}?page=1&limit=5",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vcmodel}}"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "652"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"28c-DfEKR92JZAEvtdzLgzhexKmVPHk\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 04:15:50 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": [\n        {\n            \"id\": 2,\n            \"name\": \"V12 Vantage Coupe\",\n            \"type_id\": 8,\n            \"created_at\": \"2023-04-16T00:37:48.000Z\",\n            \"updated_at\": \"2023-04-16T00:37:48.000Z\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"DBS 770 Ultimate\",\n            \"type_id\": 12,\n            \"created_at\": \"2023-04-16T00:56:31.000Z\",\n            \"updated_at\": \"2023-04-16T00:56:31.000Z\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"DBS 770 Ultimate Volante\",\n            \"type_id\": 12,\n            \"created_at\": \"2023-04-16T00:57:11.000Z\",\n            \"updated_at\": \"2023-04-16T00:57:57.000Z\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Toyota 86\",\n            \"type_id\": 3,\n            \"created_at\": \"2023-04-16T00:59:13.000Z\",\n            \"updated_at\": \"2023-04-16T01:22:30.000Z\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Agya\",\n            \"type_id\": 1,\n            \"created_at\": \"2023-04-16T01:34:40.000Z\",\n            \"updated_at\": \"2023-04-16T01:34:40.000Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Model Type ID Filter",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxODE5NSwiZXhwIjoxNjgxNjE4NDk1fQ.gQqyy_K28rA0c7H5s6SaUOYWdMx6qFsQHfGyoH1y1ts",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/auth/{{vcmodel}}/type/3?page=1&limit=5",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"{{vcmodel}}",
+										"type",
+										"3"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Model Type ID Filter",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/auth/{{vcmodel}}/type/15?page=1&limit=5",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vcmodel}}",
+												"type",
+												"15"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "145"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"91-N2PuFbjKvk9RhOUu84R0hpmAfA0\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 04:11:39 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": [\n        {\n            \"id\": 8,\n            \"name\": \"Fortuner\",\n            \"type_id\": 15,\n            \"created_at\": \"2023-04-16T01:36:07.000Z\",\n            \"updated_at\": \"2023-04-16T01:38:22.000Z\"\n        }\n    ]\n}"
+								},
+								{
+									"name": "Get Model Type ID Filter w/ Wrong Data",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/auth/{{vcmodel}}/type/3?page=1&limit=5",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vcmodel}}",
+												"type",
+												"3"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "271"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"10f-8fuPBnYKS5IHaDxC6yqoW3sS2wc\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 04:12:38 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": [\n        {\n            \"id\": 5,\n            \"name\": \"Toyota 86\",\n            \"type_id\": 3,\n            \"created_at\": \"2023-04-16T00:59:13.000Z\",\n            \"updated_at\": \"2023-04-16T01:22:30.000Z\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"City Hatchback\",\n            \"type_id\": 3,\n            \"created_at\": \"2023-04-16T04:10:08.000Z\",\n            \"updated_at\": \"2023-04-16T04:10:08.000Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Create Model *Admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxODE5NSwiZXhwIjoxNjgxNjE4NDk1fQ.gQqyy_K28rA0c7H5s6SaUOYWdMx6qFsQHfGyoH1y1ts",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "type_id",
+											"value": "3",
+											"type": "default"
+										},
+										{
+											"key": "name",
+											"value": "City Hatchback",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/auth/{{vcmodel}}/create",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"{{vcmodel}}",
+										"create"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create Model *Admin",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "type_id",
+													"value": "3",
+													"type": "default"
+												},
+												{
+													"key": "name",
+													"value": "City Hatchback",
+													"type": "default"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/auth/{{vcmodel}}/create",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vcmodel}}",
+												"create"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "54"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"36-0qs0PH51Okyr9cz6sJJyq0ARLYs\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 04:10:08 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": \"Success Create Vehicle Model\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Patch Model *Admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxODE5NSwiZXhwIjoxNjgxNjE4NDk1fQ.gQqyy_K28rA0c7H5s6SaUOYWdMx6qFsQHfGyoH1y1ts",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "10",
+											"description": "\n",
+											"type": "default"
+										},
+										{
+											"key": "type_id",
+											"value": "4",
+											"type": "default"
+										},
+										{
+											"key": "name",
+											"value": "Toyota 86",
+											"type": "default",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/auth/{{vcmodel}}/patch",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"{{vcmodel}}",
+										"patch"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Patch Model *Admin",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "id",
+													"value": "10",
+													"description": "\n",
+													"type": "default"
+												},
+												{
+													"key": "type_id",
+													"value": "4",
+													"type": "default"
+												},
+												{
+													"key": "name",
+													"value": "Toyota 86",
+													"type": "default",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/auth/{{vcmodel}}/patch",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vcmodel}}",
+												"patch"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "55"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"37-F5y1UPbmNGSJd0GrYxtctsVBlx0\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 04:14:29 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": \"Success Update Vehicle Models\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Model *Admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxODUxMywiZXhwIjoxNjgxNjE4ODEzfQ.v4kvUaGLQVGCHBLvkCGyKnFGL4D5CbYvCST7Yf4F7D8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "1",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/auth/{{vcmodel}}/delete",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"{{vcmodel}}",
+										"delete"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete Model *Admin",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "id",
+													"value": "1",
+													"type": "default"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/auth/{{vcmodel}}/delete",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vcmodel}}",
+												"delete"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "65"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"41-XQh+nLYd0uzvBH3YAmsWPWB4y0o\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 04:15:27 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": \"Success Delete Data Vehicle Model ID: 1\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Year",
+					"item": [
+						{
+							"name": "Get Year",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxODgzMiwiZXhwIjoxNjgxNjE5MTMyfQ.Yk9G6Do0NqM4erm2vgaO-IGp7ief6Lpp2mMNhbGmbZo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/auth/{{vcyear}}/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"{{vcyear}}",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Year",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/auth/{{vcyear}}/",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vcyear}}",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "334"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"14e-xUbm6meECHVtnwtKKtj24XSMxI0\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 04:17:06 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": [\n        {\n            \"id\": 2,\n            \"year\": \"2021\",\n            \"created_at\": \"2023-04-16T02:05:16.000Z\",\n            \"updated_at\": \"2023-04-16T02:05:16.000Z\"\n        },\n        {\n            \"id\": 3,\n            \"year\": \"2022\",\n            \"created_at\": \"2023-04-16T02:05:18.000Z\",\n            \"updated_at\": \"2023-04-16T02:05:18.000Z\"\n        },\n        {\n            \"id\": 4,\n            \"year\": \"2023\",\n            \"created_at\": \"2023-04-16T02:43:15.000Z\",\n            \"updated_at\": \"2023-04-16T02:43:15.000Z\"\n        }\n    ]\n}"
+								},
+								{
+									"name": "Get Year after Create",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/auth/{{vcyear}}/",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vcyear}}",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "437"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1b5-kgTr4AIdeNJMsXD4CCV909G/HZE\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 04:17:55 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": [\n        {\n            \"id\": 2,\n            \"year\": \"2021\",\n            \"created_at\": \"2023-04-16T02:05:16.000Z\",\n            \"updated_at\": \"2023-04-16T02:05:16.000Z\"\n        },\n        {\n            \"id\": 3,\n            \"year\": \"2022\",\n            \"created_at\": \"2023-04-16T02:05:18.000Z\",\n            \"updated_at\": \"2023-04-16T02:05:18.000Z\"\n        },\n        {\n            \"id\": 4,\n            \"year\": \"2023\",\n            \"created_at\": \"2023-04-16T02:43:15.000Z\",\n            \"updated_at\": \"2023-04-16T02:43:15.000Z\"\n        },\n        {\n            \"id\": 5,\n            \"year\": \"2024\",\n            \"created_at\": \"2023-04-16T04:17:44.000Z\",\n            \"updated_at\": \"2023-04-16T04:17:44.000Z\"\n        }\n    ]\n}"
+								},
+								{
+									"name": "Get Year after Update",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/auth/{{vcyear}}/",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vcyear}}",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "437"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1b5-o/mYYtVzVUeUuioRzUEwGSMPKXQ\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 04:19:08 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": [\n        {\n            \"id\": 2,\n            \"year\": \"2021\",\n            \"created_at\": \"2023-04-16T02:05:16.000Z\",\n            \"updated_at\": \"2023-04-16T02:05:16.000Z\"\n        },\n        {\n            \"id\": 3,\n            \"year\": \"2022\",\n            \"created_at\": \"2023-04-16T02:05:18.000Z\",\n            \"updated_at\": \"2023-04-16T02:05:18.000Z\"\n        },\n        {\n            \"id\": 4,\n            \"year\": \"2023\",\n            \"created_at\": \"2023-04-16T02:43:15.000Z\",\n            \"updated_at\": \"2023-04-16T02:43:15.000Z\"\n        },\n        {\n            \"id\": 5,\n            \"year\": \"2019\",\n            \"created_at\": \"2023-04-16T04:17:44.000Z\",\n            \"updated_at\": \"2023-04-16T04:18:47.000Z\"\n        }\n    ]\n}"
+								},
+								{
+									"name": "Get Year after Delete",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/auth/{{vcyear}}/",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vcyear}}",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "334"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"14e-qVOAUEfZCwDNnuBGwYw8y25BWKU\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 04:20:49 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": [\n        {\n            \"id\": 3,\n            \"year\": \"2022\",\n            \"created_at\": \"2023-04-16T02:05:18.000Z\",\n            \"updated_at\": \"2023-04-16T02:05:18.000Z\"\n        },\n        {\n            \"id\": 4,\n            \"year\": \"2023\",\n            \"created_at\": \"2023-04-16T02:43:15.000Z\",\n            \"updated_at\": \"2023-04-16T02:43:15.000Z\"\n        },\n        {\n            \"id\": 5,\n            \"year\": \"2019\",\n            \"created_at\": \"2023-04-16T04:17:44.000Z\",\n            \"updated_at\": \"2023-04-16T04:18:47.000Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Year by ID Filter",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxOTc1OCwiZXhwIjoxNjgxNjIwMDU4fQ.v7ltte_a0aZIpmW1H167rl3cbC1CwZl_XR6vphX_PPg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/auth/{{vcyear}}/3",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"{{vcyear}}",
+										"3"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Year by ID Filter",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/auth/{{vcyear}}/3",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vcyear}}",
+												"3"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "128"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"80-5+iRi9li3dLngKrQ87597xsrfQA\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 04:37:03 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": [\n        {\n            \"id\": 3,\n            \"year\": \"2022\",\n            \"created_at\": \"2023-04-16T02:05:18.000Z\",\n            \"updated_at\": \"2023-04-16T02:05:18.000Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Create Year *Admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxODUxMywiZXhwIjoxNjgxNjE4ODEzfQ.v4kvUaGLQVGCHBLvkCGyKnFGL4D5CbYvCST7Yf4F7D8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "year",
+											"value": "2024",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/auth/{{vcyear}}/create",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"{{vcyear}}",
+										"create"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create Year *Admin",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "year",
+													"value": "2024",
+													"type": "default"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/auth/{{vcyear}}/create",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vcyear}}",
+												"create"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "53"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"35-gTM2Hc5DQIgP/O8Q6h3eFZzBsaU\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 04:17:44 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": \"Success Create Vehicle Year\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Patch Year *Admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxODUxMywiZXhwIjoxNjgxNjE4ODEzfQ.v4kvUaGLQVGCHBLvkCGyKnFGL4D5CbYvCST7Yf4F7D8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "5",
+											"type": "default"
+										},
+										{
+											"key": "year",
+											"value": "2019",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/auth/{{vcyear}}/patch",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"{{vcyear}}",
+										"patch"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Patch Year *Admin",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "id",
+													"value": "5",
+													"type": "default"
+												},
+												{
+													"key": "year",
+													"value": "2019",
+													"type": "default"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/auth/{{vcyear}}/patch",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vcyear}}",
+												"patch"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "53"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"35-Zf2ECeEk4bar5h9FIC/y+P4WU8c\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 04:18:47 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": \"Success Update Vehicle Year\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Year *Admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxODgzMiwiZXhwIjoxNjgxNjE5MTMyfQ.Yk9G6Do0NqM4erm2vgaO-IGp7ief6Lpp2mMNhbGmbZo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "2",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/auth/{{vcyear}}/delete",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"{{vcyear}}",
+										"delete"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete Year *Admin",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "id",
+													"value": "2",
+													"type": "default"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/auth/{{vcyear}}/delete",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vcyear}}",
+												"delete"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "64"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"40-jAc9j4kPTy1/xK8fYVaFIAJRKco\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 04:20:41 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": \"Success Delete Data Vehicle Year ID: 2\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Pricelist",
+					"item": [
+						{
+							"name": "Get Pricelist",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxOTE0OCwiZXhwIjoxNjgxNjE5NDQ4fQ.KpTMO7nimK-4PFUiJUSuWZRwncBtSM5146rx2rHVKZs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/auth/{{vcpricelist}}?page=1&limit=5",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"{{vcpricelist}}"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Pricelist",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/auth/{{vcpricelist}}?page=1&limit=5",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vcpricelist}}"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "385"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"181-1bdhRhIrwCgN+QnyJ8waW7DE7aQ\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 04:29:35 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": [\n        {\n            \"id\": 1,\n            \"code\": \"HND01\",\n            \"name\": \"Agya\",\n            \"type_id\": 1,\n            \"year\": \"2022\",\n            \"price\": 167900000\n        },\n        {\n            \"id\": 4,\n            \"code\": \"TYT01-F\",\n            \"name\": \"Fortuner\",\n            \"type_id\": 15,\n            \"year\": \"2022\",\n            \"price\": 75000000\n        },\n        {\n            \"id\": 6,\n            \"code\": \"TYT86-A\",\n            \"name\": \"City Hatchback\",\n            \"type_id\": 4,\n            \"year\": \"2022\",\n            \"price\": 343000000\n        },\n        {\n            \"id\": 7,\n            \"code\": \"HND01-CTY\",\n            \"name\": \"City Hatchback\",\n            \"type_id\": 4,\n            \"year\": \"2022\",\n            \"price\": 343000000\n        }\n    ]\n}"
+								},
+								{
+									"name": "Get Pricelist after Delete",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/auth/{{vcpricelist}}?page=1&limit=5",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vcpricelist}}"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "291"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"123-K8Ugnnxxkj3He/o5pXOUoecoTPo\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 04:30:20 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": [\n        {\n            \"id\": 1,\n            \"code\": \"HND01\",\n            \"name\": \"Agya\",\n            \"type_id\": 1,\n            \"year\": \"2022\",\n            \"price\": 167900000\n        },\n        {\n            \"id\": 4,\n            \"code\": \"TYT01-F\",\n            \"name\": \"Fortuner\",\n            \"type_id\": 15,\n            \"year\": \"2022\",\n            \"price\": 75000000\n        },\n        {\n            \"id\": 7,\n            \"code\": \"HND01-CTY\",\n            \"name\": \"City Hatchback\",\n            \"type_id\": 4,\n            \"year\": \"2022\",\n            \"price\": 343000000\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Pricelist Same Year Filter",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxOTc1OCwiZXhwIjoxNjgxNjIwMDU4fQ.v7ltte_a0aZIpmW1H167rl3cbC1CwZl_XR6vphX_PPg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/auth/{{vcpricelist}}/2022?page=1&limit=5",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"{{vcpricelist}}",
+										"2022"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Pricelist Same Year Filter",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/auth/{{vcpricelist}}/2022?page=1&limit=5",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vcpricelist}}",
+												"2022"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "240"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"f0-Z/papO+ZZRSyZRE/YMz1DfXHG7Y\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 04:40:09 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": [\n        {\n            \"id\": 1,\n            \"name\": \"Agya\",\n            \"type_id\": 1,\n            \"year\": \"2022\",\n            \"price\": 167900000\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Fortuner\",\n            \"type_id\": 15,\n            \"year\": \"2022\",\n            \"price\": 75000000\n        },\n        {\n            \"id\": 7,\n            \"name\": \"City Hatchback\",\n            \"type_id\": 4,\n            \"year\": \"2022\",\n            \"price\": 343000000\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Create Pricelist *Admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxOTE0OCwiZXhwIjoxNjgxNjE5NDQ4fQ.KpTMO7nimK-4PFUiJUSuWZRwncBtSM5146rx2rHVKZs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "code",
+											"value": "HND01-CTY",
+											"type": "default"
+										},
+										{
+											"key": "price",
+											"value": "343000000",
+											"type": "default"
+										},
+										{
+											"key": "year_id",
+											"value": "3",
+											"type": "default"
+										},
+										{
+											"key": "model_id",
+											"value": "10",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/auth/{{vcpricelist}}/create",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"{{vcpricelist}}",
+										"create"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create Pricelist *Admin",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "code",
+													"value": "TYT86-A",
+													"type": "default"
+												},
+												{
+													"key": "price",
+													"value": "343000000",
+													"type": "default"
+												},
+												{
+													"key": "year_id",
+													"value": "3",
+													"type": "default"
+												},
+												{
+													"key": "model_id",
+													"value": "10",
+													"type": "default"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/auth/{{vcpricelist}}/create",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vcpricelist}}",
+												"create"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "58"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3a-LDEH2gmdGoiU9p9h82IXN4MQfQI\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 04:24:12 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": \"Success Create Vehicle Pricelist\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Patch Pricelist *Admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxOTE0OCwiZXhwIjoxNjgxNjE5NDQ4fQ.KpTMO7nimK-4PFUiJUSuWZRwncBtSM5146rx2rHVKZs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "1",
+											"type": "default"
+										},
+										{
+											"key": "price",
+											"value": "167900000",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/auth/{{vcpricelist}}/patch",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"{{vcpricelist}}",
+										"patch"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Patch Pricelist *Admin",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "id",
+													"value": "1",
+													"type": "default"
+												},
+												{
+													"key": "price",
+													"value": "167900000",
+													"type": "default"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/auth/{{vcpricelist}}/patch",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vcpricelist}}",
+												"patch"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "54"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"36-a3NRZq/fMlgUTwnvyB+IpFqbC1U\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 04:28:33 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": \"Success Update Vehicle Price\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Pricelist *Admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZCI6MTQsIm5hbWUiOiJBZG1pbmlzdGF0b3IgSnVhbCBNb2JpbCIsImlzX2FkbWluIjoxLCJwYXNzd29yZCI6ImM4NDI1OGU5YzM5MDU5YTg5YWI3N2Q4NDZkZGFiOTA5IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMTZUMDM6Mjk6MzAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTA0LTE2VDAzOjI5OjMwLjAwMFoifV0sImlhdCI6MTY4MTYxOTE0OCwiZXhwIjoxNjgxNjE5NDQ4fQ.KpTMO7nimK-4PFUiJUSuWZRwncBtSM5146rx2rHVKZs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "6",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/auth/{{vcpricelist}}/delete",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"{{vcpricelist}}",
+										"delete"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete Pricelist *Admin",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "id",
+													"value": "6",
+													"type": "default"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{host}}/auth/{{vcpricelist}}/delete",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"auth",
+												"{{vcpricelist}}",
+												"delete"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "69"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"45-KClDsp0C5GZCr966vyd7FF0hLPk\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Apr 2023 04:30:03 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"values\": \"Success Delete Data Vehicle Pricelist ID: 6\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Title REST API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost:3000",
+			"type": "default"
+		},
+		{
+			"key": "vcbrand",
+			"value": "vehicle/brand",
+			"type": "default"
+		},
+		{
+			"key": "vctype",
+			"value": "vehicle/type",
+			"type": "default"
+		},
+		{
+			"key": "vcmodel",
+			"value": "vehicle/model",
+			"type": "default"
+		},
+		{
+			"key": "vcyear",
+			"value": "vehicle/year",
+			"type": "default"
+		},
+		{
+			"key": "vcpricelist",
+			"value": "vehicle/pricelist",
+			"type": "default"
+		}
+	]
+}
